@@ -9,7 +9,7 @@ listint_t *insert_node(listint_t **head, int number)
 	tmp = *head;
 	while (tmp != NULL)
 	{
-		if (number >= tmp->n)
+		if (number <= tmp->n)
 			break;
 		tmp = tmp->next;
 	}

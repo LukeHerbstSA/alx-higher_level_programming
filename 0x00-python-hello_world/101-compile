@@ -1,4 +1,2 @@
 #!/bin/bash
-echo "Compiling main.py ..."
-gcc "$PYFILE" -o "$PYFILEc"
-exit 0
+gcc "${PYFILE}" -o "${PYFILEc}"

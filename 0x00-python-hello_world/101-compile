@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "gcc $PYFILE -o $PYFILEc"
+gcc "$PYFILE" -o "$PYFILEc"

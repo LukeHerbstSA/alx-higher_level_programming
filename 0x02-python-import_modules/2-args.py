@@ -2,12 +2,12 @@
 if __name__ == "__main__":
     import sys
     i = len(sys.argv)
-    print(i, end=" ")
-    if (i == 0 or i > 1):
+    print(i - 1, end=" ")
+    if (i == 1 or i > 2):
         print("arguments", end="")
     else:
         print("argument", end="")
-    if (i == 0):
+    if (i == 1):
         print(".")
     else:
         print(":")

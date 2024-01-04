@@ -8,4 +8,3 @@ if __name__ == "__main__":
     print("{} -".format(a), "{} =".format(b), "{}".format(sub(a, b)))
     print("{} x".format(a), "{} =".format(b), "{}".format(mul(a, b)))
     print("{} /".format(a), "{} =".format(b), "{}".format(div(a, b)))
-

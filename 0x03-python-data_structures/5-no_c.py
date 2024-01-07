@@ -2,8 +2,10 @@
 
 def no_c(my_string):
     bad_chars = ["c", "C"]
-    strcopy = my_string.copy()
-    for char in bad_chars:
-        while (char in strcopy):
-            strcopy.remove(char)
-    return (strcopy)
+    newstring = ""
+    j = 0
+    for i in range(0, len(my_string)):
+        if (my_string[i] not in bad_chars):
+            newstring[j] = my_string[i]
+            j = j + 1
+    return (newstring)

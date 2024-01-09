@@ -24,13 +24,14 @@ int is_palindrome(listint_t **head)
 		if (tmp != *head)
 			reversetmp->next = prevnode;
 		prevnode = reversetmp;
-		if (tmp->next == NULL)
-		{
-			revtmpstart = reversetmp;
-			break;
-		}
 		tmp = tmp->next;
 		range++;
+		if (tmp == NULL)
+                {
+			revtmpstart = reversetmp;
+			reversetmp->next = prevnode;
+			break;
+                }
 	}
 	tmp = *head;
 	range = (range % 2 == 0) ? range / 2 : ((range + 1) / 2);

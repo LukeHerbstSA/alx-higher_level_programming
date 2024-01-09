@@ -27,11 +27,11 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 		range++;
 		if (tmp == NULL)
-                {
+		{
 			revtmpstart = reversetmp;
 			reversetmp->next = prevnode;
 			break;
-                }
+		}
 	}
 	tmp = *head;
 	range = (range % 2 == 0) ? range / 2 : ((range + 1) / 2);

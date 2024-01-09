@@ -8,6 +8,7 @@
 void free_singly(listint_t **reversetmp)
 {
 	listint_t prevnode = NULL;
+
 	while (reversetmp != NULL)
 	{
 		prevnode = reversetmp;

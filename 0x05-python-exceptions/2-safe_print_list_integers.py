@@ -5,10 +5,12 @@ def safe_print_list_integers(my_list=[], x=0):
 
     if (x == 0 or x < 0 or not my_list):
         return (y)
-    for element in my_list[:x - 1]:
+    for i in range(0, x):
         try:
-            print("{:d}".format(element), end="")
+            print("{:d}".format(my_list[i]), end="")
             y += 1
+        except TypeError:
+            pass
         except ValueError:
             pass
     print()

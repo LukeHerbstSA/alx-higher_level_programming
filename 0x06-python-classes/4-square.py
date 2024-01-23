@@ -1,13 +1,16 @@
 #!/usr/bin/python3
+"""class square with sever funcs / propertys
+"""
+
 
 class Square:
+    """class square with 2 property funcs and area
+    """
     def __init__(self, size=0):
         if (not isinstance(size, int)):
-            print("size must be an integer")
-            raise TypeError
+            raise TypeError("size must be an integer")
         if (size < 0):
-            print("size must be >= 0")
-            raise ValueError
+            raise ValueError("size must be >= 0")
         self.__size = size
 
     def area(self):
@@ -20,9 +23,7 @@ class Square:
     @size.setter
     def size(self, size):
         if (not isinstance(size, int)):
-            print("size must be an integer")
-            raise TypeError
+            raise TypeError("size must be an integer")
         if (size < 0):
-            print("size must be >= 0")
-            raise ValueError
+            raise ValueError("size must be >= 0")
         self.__size = size

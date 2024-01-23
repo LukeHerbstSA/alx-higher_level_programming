@@ -48,8 +48,7 @@ class Square:
         if (self.__size == 0):
             hashsqr += ""
         for var in range(0, self.position[1]):
-            if (var != self.position[1] - 1):
-                hashsqr += "\n"
+            hashsqr += "\n"
         for i in range(0, self.__size):
             for x in range(0, self.position[0]):
                 hashsqr += " "

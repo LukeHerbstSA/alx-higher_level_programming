@@ -1,6 +1,9 @@
 #!/usr/bin/python
-
+"""module square: contains class square
+"""
 class Square:
+    """class square: contains various propertys + funcs
+    """
     def __init__(self, size=0):
         if (not isinstance(size, int)):
             raise TypeError("size must be an integer")

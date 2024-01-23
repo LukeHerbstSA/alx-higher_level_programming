@@ -10,7 +10,7 @@ class Square:
     position_err = "position must be a tuple of 2 positive integers"
 
     def __str__(self):
-        return (self.my_print())
+        return (self.my_strobj())
 
     def __init__(self, size=0, position=(0, 0)):
         if (not isinstance(size, int)):
@@ -32,18 +32,30 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        hashsqr = ""
         if (self.__size == 0):
-            hashsqr + ""
-            return (hashsq
+            print("")
         for var in range(0, self.position[1]):
-            hashsqr + ""
+            print()
         for i in range(0, self.__size):
             for x in range(0, self.position[0]):
                 print(" ", end="")
             for j in range(0, self.__size):
                 print("#", end="")
             print()
+
+    def my_strobj(self):
+        hashsqr = ""
+        if (self.__size == 0):
+            hashsqr += ""
+        for var in range(0, self.position[1]):
+            hashsqr += "\n"
+        for i in range(0, self.__size):
+            for x in range(0, self.position[0]):
+                hashsqr += " "
+            for j in range(0, self.__size):
+                hashsqr += "#"
+            hashsqr += "\n"
+        return (hashsqr)
 
     @property
     def size(self):

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """module with only one class, Square
 """
+
+
 class Square:
     """class square with one function init
     """

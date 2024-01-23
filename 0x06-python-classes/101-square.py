@@ -32,10 +32,12 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
+        hashsqr = ""
         if (self.__size == 0):
-            print("")
+            hashsqr + ""
+            return (hashsq
         for var in range(0, self.position[1]):
-            print()
+            hashsqr + ""
         for i in range(0, self.__size):
             for x in range(0, self.position[0]):
                 print(" ", end="")

@@ -46,7 +46,7 @@ class Square:
     def my_strobj(self):
         hashsqr = ""
         if (self.__size == 0):
-            hashsqr += ""
+            hashsqr += "\n"
         for var in range(0, self.position[1]):
             hashsqr += "\n"
         for i in range(0, self.__size):
@@ -54,7 +54,8 @@ class Square:
                 hashsqr += " "
             for j in range(0, self.__size):
                 hashsqr += "#"
-            hashsqr += "\n"
+            if (i != self.__size - 1):
+                hashsqr += "\n"
         return (hashsqr)
 
     @property

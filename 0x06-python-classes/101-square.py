@@ -46,7 +46,7 @@ class Square:
     def my_strobj(self):
         hashsqr = ""
         if (self.__size == 0):
-            hashsqr += "\n"
+            hashsqr += ""
         for var in range(0, self.position[1]):
             hashsqr += "\n"
         for i in range(0, self.__size):

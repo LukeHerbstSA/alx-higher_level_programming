@@ -8,5 +8,5 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         sum = None
     finally:
-        print("Inside Result: {}".format(sum))
+        print("Inside result: {}".format(sum))
     return (sum)

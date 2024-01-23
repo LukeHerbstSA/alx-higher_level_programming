@@ -9,11 +9,14 @@ class Square:
             print("size must be >= 0")
             raise ValueError
         self.__size = size
+
     def area(self):
         return (self.__size * self.__size)
+
     @property
     def size(self):
         return (self.__size)
+
     @size.setter
     def size(self, size):
         if (not isinstance(size, int)):

@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 
 class Square:
-    pass
+    """
+    An empty class called square used to demonstrate class creation
+    """

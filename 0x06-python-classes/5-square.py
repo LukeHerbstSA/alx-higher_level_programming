@@ -1,6 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """module square: contains class square
 """
+
+
 class Square:
     """class square: contains various propertys + funcs
     """

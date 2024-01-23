@@ -19,10 +19,10 @@ class Square:
 
     def position_checker(self, position):
         if (not isinstance(position, tuple) or len(position) != 2):
-            raise TypeError(position_err)
+            raise TypeError(self.position_err)
         for item in position:
             if (not isinstance(item, int) or item < 0):
-                raise TypeError(position_err)
+                raise TypeError(self.position_err)
 
     def area(self):
         return (self.__size * self.__size)
@@ -34,7 +34,7 @@ class Square:
             print()
         for i in range(0, self.__size):
             for x in range(0, self.position[0]):
-                print("_", end="")
+                print(" ", end="")
             for j in range(0, self.__size):
                 print("#", end="")
             print()

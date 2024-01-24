@@ -5,7 +5,7 @@
 	* Description: frees passed singly
 	* @reversetmp: passed singly
 	*/
-void free_singly(listint_t **reversetmp)
+void free_singly(listint_t *reversetmp)
 {
 	listint_t prevnode = NULL;
 

@@ -16,6 +16,6 @@ typedef struct listint_s
 } listint_t;
 
 int is_palindrome(listint_t **head);
-void free_singly(listint_t **reversetmp);
+void free_singly(listint_t *reversetmp);
 
 #endif

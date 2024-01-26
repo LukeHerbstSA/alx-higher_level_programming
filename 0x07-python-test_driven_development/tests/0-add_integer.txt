@@ -1,33 +1,33 @@
 # Doctest.txt test file
 #!/usr/bin/python3
 
+"""
 def add_integer(a, b=89):
-	"""
-	Function that adds 2 integers
-
-	Test Cases:
-
-	>>> add_integer(0, 0)
-	89
-	>>> add_integer(10, 0)
-	99
-	>>> add_integer("Hello", 0)
-	'a must be an integer'
-	>>> add_integer(0, "Hello")
-	'b must be an integer'
-	>>> add_integer("Hello", "World")
-	'a must be an integer'
-	>>> add_integer(None)
-	'a must be an integer'
-	>>> add_integer(4, None)
-	'b must be an integer'
-	>>> add_integer(-1)
-	88
-	"""
-	a = int(a) if isinstance(a, float) else a
-	b = int(b) if isinstance(b, float) else b
-	if (not isinstance(a, int)):
-		raise TypeError("a must be an integer")
-	if (not isinstance(b, int)):
-		raise TypeError("b must be an integer")
-	return (a + b)
+...	Function that adds 2 integers
+...
+...	Test Cases:
+...
+...	>>> add_integer(0, 0)
+...	89
+...	>>> add_integer(10, 0)
+...	99
+...	>>> add_integer("Hello", 0)
+...	'a must be an integer'
+...	>>> add_integer(0, "Hello")
+...	'b must be an integer'
+...	>>> add_integer("Hello", "World")
+...	'a must be an integer'
+...	>>> add_integer(None)
+...	'a must be an integer'
+...	>>> add_integer(4, None)
+...	'b must be an integer'
+...	>>> add_integer(-1)
+...	88
+...	a = int(a) if isinstance(a, float) else a
+...	b = int(b) if isinstance(b, float) else b
+...	if (not isinstance(a, int)):
+...		raise TypeError("a must be an integer")
+...	if (not isinstance(b, int)):
+...		raise TypeError("b must be an integer")
+...	return (a + b)
+"""

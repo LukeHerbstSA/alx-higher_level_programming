@@ -27,7 +27,7 @@ class Rectangle:
         return (result)
 
     def __repr__(self):
-        return ("result = ''\n" + 
+        return ("result = ''\n" +
                 "if (self.__width == 0 or self.__height == 0):\n" +
                 "   return (result)\n" +
                 "for i in range(0, self.__height):\n" +

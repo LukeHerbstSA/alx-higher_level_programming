@@ -9,6 +9,9 @@ class Rectangle:
     """
     Rectangle class
     """
+
+    number_of_instances = 0
+
     @staticmethod
     def heightcheck(height):
         if (not isinstance(height, int)):
@@ -38,12 +41,14 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
+        number_of_instances += 1
 
     def __init__(self, width=0, height=0):
         Rectangle.heightcheck(height)
         Rectangle.widthcheck(width)
         self.__width = width
         self.__height = height
+        number_of_instances += 1
 
     def area(self):
         return (self.__width * self.__height)

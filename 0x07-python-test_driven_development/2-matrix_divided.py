@@ -1,16 +1,24 @@
 #!/usr/bin/python3
 
-def matrix_divided(matrix, div):
-    matrix2 = []
+"""
+matrix divided module
+"""
 
+
+def matrix_divided(matrix, div):
+    """
+    matrix divided class
+    """
+    matrix2 = []
+    Typeerr = "matrix must be a matrix (list of lists) of integers/floats"
     if (not isinstance(div, float) and not isinstance(div, int)):
         raise TypeError("div must be a number")
     if (div == 0):
         raise ZeroDivisionError("division by zero")
     if (matrix is None):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(Typeerr)
     if (len(matrix) == 0):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(Typeerr)
     j = len(matrix[0])
     for mylist in matrix:
         if (j != len(mylist)):
@@ -18,15 +26,16 @@ def matrix_divided(matrix, div):
     for i in range(0, len(matrix)):
         divlist = []
         for x in range(0, len(matrix[i])):
-            if (not isinstance(matrix[i][x], int) and not isinstance(matrix[i][x], float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            number = matrix[i][x] / div
-            dcmalstr = str(number)
+            sym = matrix[i][x]
+            if (not isinstance(sym, int) and not isinstance(sym, float)):
+                raise TypeError(Typeerr)
+            num = sym / div
+            dcmalstr = str(num)
             for r in range(0, len(dcmalstr)):
                 if (dcmalstr[r] == "."):
                     decimals = len(dcmalstr) - r
-                    number = "{:.2f}".format(number) if decimals > 2 else number
-                    break;
-            divlist.append(number)
+                    num = "{:.2f}".format(num) if decimals > 2 else num
+                    break
+            divlist.append(num)
         matrix2.append(divlist)
-    return(matrix2)
+    return (matrix2)

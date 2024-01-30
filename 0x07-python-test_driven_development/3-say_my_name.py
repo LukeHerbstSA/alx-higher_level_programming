@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
+"""
+say my name module
+"""
+
+
 def say_my_name(first_name, last_name=""):
+    """
+    say my name class
+    """
     if (not isinstance(first_name, str)):
         raise TypeError("first_name must be a string")
     if (not isinstance(first_name, str)):

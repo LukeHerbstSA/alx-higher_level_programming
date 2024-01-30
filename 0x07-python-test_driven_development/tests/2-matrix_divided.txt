@@ -1,23 +1,23 @@
 >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
->>> print(matrix_divided([[2, 4, 6], [2 6], [2, 5]]), 2)
-[[1.00, 2.00, 3.00], [1.00, 3.00], [1.00, 2.00]]
->>>print(matrix_divided([[]]), 2) #doctest +ELLIPSIS
-Traceback (most recent call last):
-...
-TypeError: TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> print(matrix_divided([1], [1, 2]), 2) #doctest +ELLIPSIS
-Traceback (most recent call last):
-...
-TypeError: Each row of the matrix must have the same size
->>> print(matrix_divided([1, 5], [1, "hello"]), 2) #doctest +ELLIPSIS
+>>> print(matrix_divided([[2, 4], [2, 6], [2, 5]], 2))
+[[1.0, 2.0], [1.0, 3.0], [1.0, 2.5]]
+>>> print(matrix_divided([[]], 2)) #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> print(matrix_divided([1, 4], [1, 2]), 0) #doctest +ELLIPSIS
+>>> print(matrix_divided([[1], [1, 2]], 2)) #doctest +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> print(matrix_divided([[1, 5], [1, "hello"]], 2)) #doctest +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> print(matrix_divided([[1, 4], [1, 2]], 0)) #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
->>> print(matrix_divided([1, 4], [1, 2]), "Hello") #doctest +ELLIPSIS
+>>> print(matrix_divided([[1, 4], [1, 2]], "Hello")) #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
 TypeError: div must be a number

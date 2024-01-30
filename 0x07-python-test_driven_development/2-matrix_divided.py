@@ -20,6 +20,8 @@ def matrix_divided(matrix, div):
     if (len(matrix) == 0):
         raise TypeError(Typeerr)
     j = len(matrix[0])
+    if (j == 0):
+        raise TypeError(Typeerr)
     for mylist in matrix:
         if (j != len(mylist)):
             raise TypeError("Each row of the matrix must have the same size")

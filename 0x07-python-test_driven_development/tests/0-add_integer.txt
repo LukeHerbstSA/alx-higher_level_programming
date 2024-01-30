@@ -8,12 +8,12 @@
 >>> add_integer("Hello") #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
-TypeError: 'a must be an integer'
+TypeError: a must be an integer
 >>> add_integer(0, "World") #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
-TypeError: 'b must be an integer'
+TypeError: b must be an integer
 >>> add_integer(None) #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
-TypeError: 'a must be an integer'
+TypeError: a must be an integer

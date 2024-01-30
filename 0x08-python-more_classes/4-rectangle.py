@@ -30,19 +30,12 @@ class Rectangle:
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 result = result + "#"
-            result = result + "\n"
+            if (i != self.__height - 1):
+                result = result + "\n"
         return (result)
 
     def __repr__(self):
-        return ("result = ''\n" +
-                "if (self.__width == 0 or self.__height == 0):\n" +
-                "   return (result)\n" +
-                "for i in range(0, self.__height):\n" +
-                "   for j in range(0, self.__width):\n" +
-                "       result = result + '#'\n" +
-                "   result = result + '\n'\n" +
-                "return (result)"
-                )
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __init__(self, width=0, height=0):
         Rectangle.heightcheck(height)

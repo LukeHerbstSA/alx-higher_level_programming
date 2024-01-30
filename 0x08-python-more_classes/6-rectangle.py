@@ -42,14 +42,14 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     def __init__(self, width=0, height=0):
         Rectangle.heightcheck(height)
         Rectangle.widthcheck(width)
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return (self.__width * self.__height)

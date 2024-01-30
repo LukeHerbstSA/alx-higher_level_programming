@@ -32,8 +32,9 @@ class Rectangle:
             return (result)
         for i in range(0, self.__height):
             for j in range(0, self.__width):
-                result = result + "{}".format(print_symbol)
-            result = result + "\n"
+                result = result + "{}".format(Rectangle.print_symbol)
+            if (i != self.__height - 1):
+                result = result + "\n"
         return (result)
 
     def __repr__(self):
@@ -41,14 +42,14 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     def __init__(self, width=0, height=0):
         Rectangle.heightcheck(height)
         Rectangle.widthcheck(width)
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return (self.__width * self.__height)

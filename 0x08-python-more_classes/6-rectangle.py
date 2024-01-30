@@ -41,7 +41,7 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        number_of_instances += 1
+        number_of_instances -= 1
 
     def __init__(self, width=0, height=0):
         Rectangle.heightcheck(height)

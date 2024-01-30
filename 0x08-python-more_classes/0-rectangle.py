@@ -4,6 +4,7 @@
 empty module
 """
 
+
 class Rectangle:
     """
     empty class example

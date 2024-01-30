@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
-class Rectangle:
+"""
+Rectangle module
+"""
 
+
+class Rectangle:
+    """
+    class Rectangle
+    """
     @staticmethod
     def heightcheck(height):
         if (not isinstance(height, int)):

@@ -32,7 +32,10 @@ class Rectangle:
             return (result)
         for i in range(0, self.__height):
             for j in range(0, self.__width):
-                result = result + "{}".format(Rectangle.print_symbol)
+                if (self.print_symbol == ""):
+                    result = result + "{}".format(Rectangle.print_symbol)
+                else:
+                    result = result + "{}".format(self.print_symbol)
             if (i != self.__height - 1):
                 result = result + "\n"
         return (result)
@@ -49,6 +52,7 @@ class Rectangle:
         Rectangle.widthcheck(width)
         self.__width = width
         self.__height = height
+        self.print_symbol = ""
         Rectangle.number_of_instances += 1
 
     def area(self):

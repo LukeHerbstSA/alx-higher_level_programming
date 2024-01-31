@@ -18,7 +18,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if (not isinstance(rect_2, Rectangle)):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        largest = rect_2 if rect_2.area > rect_1.area else rect_1
+        largest = rect_2 if rect_2.area() > rect_1.area() else rect_1
         return (largest)
 
     @staticmethod

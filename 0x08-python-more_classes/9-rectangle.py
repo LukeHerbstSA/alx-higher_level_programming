@@ -17,7 +17,7 @@ class Rectangle:
             raise TypeError("size must be an integer")
         if (size < 0):
             raise ValueError("size must be >= 0")
-        squareinstance = Rectangle(width=size, height=size)
+        squareinstance = Rectangle(size, size)
         return (squareinstance)
 
     @staticmethod

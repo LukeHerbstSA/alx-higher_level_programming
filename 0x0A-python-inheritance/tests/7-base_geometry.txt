@@ -1,11 +1,11 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
->>> myobj = BaseGeometry("cm", 20)
->>> myobj2 = BaseGeometry("feet", 2)
->>> myobj3 = BaseGeometry("jacob", "francis")
+>>> myobj = BaseGeometry()
+>>> myobj.integer_validator("width, 20")
+>>> myobj.integer_validator("james", "franco")
 Traceback (most recent call last):
 ...
 [TypeError] jacob must be an integer
->>> myobj5 = BaseGeometry("feet", -1)
+>>> myobj.integer_validator("feet", -1)
 Traceback (most recent call last):
 ...
 [ValueError] feet must be greater than 0

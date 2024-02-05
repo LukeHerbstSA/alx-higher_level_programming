@@ -1,0 +1,8 @@
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> myobj = BaseGeometry("cm", 20)
+>>> myobj2 = BaseGeometry("feet", 2)
+>>> myobj3 = BaseGeometry("james", 43)
+>>> myobj4 = BaseGeometry("jacob", "francis")
+[TypeError] jacob must be an integer
+>>> myobj5 = BaseGeometry("feet", -1)
+[ValueError] feet must be greater than 0

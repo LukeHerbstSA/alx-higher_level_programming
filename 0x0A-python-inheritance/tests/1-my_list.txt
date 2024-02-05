@@ -1,0 +1,6 @@
+>>> MyList = __import__("1-my_list")
+>>> newobj = MyList()
+>>> newobj.append(3)
+>>> newobj.append(1)
+>>> newobj.print_sorted()
+[3, 1]

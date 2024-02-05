@@ -8,5 +8,7 @@ def is_same_class(obj, a_class):
     """
     function that checks the type of a passed object
     """
-    if (isinstance(obj, a_class)):
+    if (type(obj) is a_class):
         return (True)
+    else:
+        return (False)

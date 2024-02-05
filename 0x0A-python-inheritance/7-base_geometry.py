@@ -8,11 +8,6 @@ class BaseGeometry:
     """
     initializes passed name and value, based on measurements
     """
-    def __init__(self, name, value):
-        self.integer_validator(name, value)
-        self.name = name
-        self.value = value
-
     def area(self):
         raise Exception("area() is not implemented")
 

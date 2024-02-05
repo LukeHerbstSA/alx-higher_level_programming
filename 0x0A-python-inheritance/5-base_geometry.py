@@ -2,6 +2,8 @@
 """
 pedantic module description for empty class
 """
+
+
 class BaseGeometry:
     """
     pedantic class description

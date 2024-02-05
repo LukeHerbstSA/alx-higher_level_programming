@@ -2,6 +2,8 @@
 """
 class basegeometry, only one 'example' method
 """
+
+
 class BaseGeometry:
     """
     class basegeometry with instance method area

@@ -2,6 +2,8 @@
 """
 lookup module function to make attribute object
 """
+
+
 def lookup(obj):
     """
     returns a list object from passed class obj

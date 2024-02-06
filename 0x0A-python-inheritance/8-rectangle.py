@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from 7-base_geometry import BaseGeometry
 """
 Rectangle modules - imports BaseGeomtry to inherit
 """

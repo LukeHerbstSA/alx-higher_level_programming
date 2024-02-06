@@ -9,5 +9,5 @@ def to_json_string(my_obj):
     """
     converts string object into json
     """
-    strobj = json.loads(my_obj)
-    return (strobj)
+    jsonobj = json.dumps(my_obj)
+    return (jsonobj)

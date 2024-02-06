@@ -25,8 +25,6 @@ class Student:
             return (vars(self))
 
     def reload_from_json(self, json):
-        with open(json, "r", encoding="utf-8") as myjson:
-            text = myjson.read()
-        newattrs = json.loads(text)
+        newattrs = json.loads(json)
         for key in newattrs:
             setattr(self, key, value)

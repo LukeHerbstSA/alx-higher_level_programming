@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-#!/usr/bin/python3
 """
 pedantic pedantic pedantic documentation
 """
@@ -14,5 +12,14 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
-    def to_json(self):
-        return (vars(self))
+
+    def to_json(self, attrs=None):
+        if (isinstance(attrs, list) and len(attrs) > 0):
+            mydict = vars(self)
+            newdict = {}
+            for key in mydict:
+                if (key in attrs):
+                    newdict[key] = mydict[key]
+            return (newdict)
+        else:
+            return (vars(self))

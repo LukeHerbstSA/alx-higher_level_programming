@@ -8,5 +8,7 @@ def read_file(filename=""):
     """
     opens file filename and reads everything, then prints
     """
+    if (filename == ""):
+        return
     with open(filename, "r", encoding="utf-8") as myfile:
         print(myfile.read())

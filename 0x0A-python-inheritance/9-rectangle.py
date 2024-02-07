@@ -10,7 +10,7 @@ class Rectangle(BaseGeometry):
     Rectangle class - initializes Rectangle instances
     """
     def __str__(self):
-        print("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def __init__(self, width, height):
         self.integer_validator("width", width)

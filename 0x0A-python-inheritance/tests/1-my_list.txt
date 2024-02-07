@@ -4,3 +4,6 @@
 >>> newobj.append(1)
 >>> newobj.print_sorted()
 [1, 3]
+>>> newobj = MyList()
+>>> newobj.print_sorted()
+[]

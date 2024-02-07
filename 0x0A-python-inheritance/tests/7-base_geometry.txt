@@ -1,11 +1,17 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> myobj = BaseGeometry()
 >>> myobj.integer_validator("width", 20)
->>> myobj.integer_validator("james", "franco")
+>>> myobj.integer_validator("james", "franco") #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
 [TypeError] jacob must be an integer
->>> myobj.integer_validator("feet", -1)
+>>> myobj.integer_validator("feet", -1) #doctest +ELLIPSIS
 Traceback (most recent call last):
 ...
 [ValueError] feet must be greater than 0
+>>> myobj.integer_validator()
+>>> myobj.area()
+>>> myobj.integer_validator("age", [20]) #doctest +ELLIPSIS
+Traceback (most recent call last):
+...
+[TypeError] age must be an integer

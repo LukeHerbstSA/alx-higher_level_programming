@@ -10,7 +10,7 @@ class Square(Rectangle):
     pedantic pedantic pedantic documentation
     """
     def __str__(self):
-        print("[Square] {}/{}".format(self.__size, self.__size))
+        return ("[Square] {}/{}".format(self.__size, self.__size))
     def __init__(self, size):
         super().integer_validator("size", size)
         self.__size = size

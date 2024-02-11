@@ -26,7 +26,11 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
+	if (args == None):
+		for j in range (0, len(kwargs)):
+			setattr(self, kwargs[j][0], kwargs[j][1])
+		return
         for i in range(0, len(args)):
             if (i == 0): # switch case?
                 self.id = args[i]

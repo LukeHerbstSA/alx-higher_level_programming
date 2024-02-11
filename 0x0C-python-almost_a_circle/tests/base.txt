@@ -1,0 +1,9 @@
+>>> Base = __import__("base.py").Base
+>>> b1 = Base(2)
+>>> print(b1.id)
+2
+>>> b2 = Base()
+>>> print(b2.id)
+1
+>>> b3 = Base()
+2

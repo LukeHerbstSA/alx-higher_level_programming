@@ -10,14 +10,14 @@ class Rectangle(Base):
     class Rectangle - inherits from rectangle
     """
     def __str__(self):
-	firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
-        scndhlf = "- {}/{}".format(self.__width, self.__height)
+	    firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
+        scndhlf = "- {}/{}".format(self.width, self.height)
         return (firsthlf + scndhlf)
 
     @staticmethod
     def validator(*values):
         for i in range(0, len(values)):
-            if (i % 2 != 0):
+            if ((i % 2) != 0):
                 attr = values[i - 1]
                 if (not isinstance(values[i], int)):
                     raise TypeError("{} must be an integer".format(attr))
@@ -35,12 +35,12 @@ class Rectangle(Base):
         self.__y = y
 
     def update(self, *args, **kwargs):
-	if (args == None):
-		for j in range (0, len(kwargs)):
-			setattr(self, kwargs[j][0], kwargs[j][1])
-		return
+	    if (args == None):
+		    for j in range (0, len(kwargs)):
+			    setattr(self, kwargs[j][0], kwargs[j][1])
+		    return
         for i in range(0, len(args)):
-            if (i == 0): # switch case?
+            if (i == 0):
                 self.id = args[i]
             if (i == 1):
                 self.__width = args[i]
@@ -62,16 +62,16 @@ class Rectangle(Base):
     def width(self):
         return (self.__width)
 
-    @property.setter
+    @width.setter
     def width(self, value):
-	Rectangle.validator("width", value)
-	self.__width = value
+	    Rectangle.validator("width", value)
+	    self.__width = value
 
     @property
     def height(self):
         return (self.__height)
 
-    @property.setter
+    @height.setter
     def height(self, value):
         Rectangle.validator("height", value)
         self.__height = value
@@ -79,7 +79,8 @@ class Rectangle(Base):
     @property
     def x(self):
         return (self.__x)
-    @property.setter
+
+    @x.setter
     def x(self, value):
         Rectangle.validator("x", value)
         self.__x = value
@@ -88,7 +89,7 @@ class Rectangle(Base):
     def y(self):
         return (self.__y)
 
-    @property.setter
+    @y.setter
     def y(self, value):
         Rectangle.validator("y", value)
         self.__y = value

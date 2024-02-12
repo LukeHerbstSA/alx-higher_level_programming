@@ -11,11 +11,11 @@ class Square(Rectangle):
 	"""
 	def __str__(self):
 		firsthlf = "[Square] ({}) {}/{} ".format(self.id, self.x, self.y)
-        	scndhlf = "- {}/{}".format(self.__width, self.__height)
-        	return (firsthlf + scndhlf)	
+        scndhlf = "- {}/{}".format(self.width, self.height)
+        return (firsthlf + scndhlf)	
 
 	def __init__(self, size, x=0, y=0, id=None):
-        	super().__init__(width=size, height=size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
 	def update(self, *args, **kwargs):
 		if (args == None):
@@ -29,14 +29,14 @@ class Square(Rectangle):
 			if (i == 2):
 				self.x = args[i]
 			if (i == 3):
-				self.x = args[i]
+				self.y = args[i]
 
 	@property
 	def size(self):
 		return (self.width)
 
-	@property.setter
+	@size.setter
 	def size(self, value):
 		super().validator("width", value)
-		self.__width = value
-		self.__height = value
+		self.width = value
+		self.height = value

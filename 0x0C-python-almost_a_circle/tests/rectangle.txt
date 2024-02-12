@@ -18,3 +18,16 @@
 [TypeError] height must be an integer
 >>> berror = Rectangle("hey", 10, 10, 10)
 [TypeError] width must be an integer
+>>> berror = Rectangle(10, 10, 10, None)
+[TypeError] y must be an integer
+>>> berror = Rectangle(10, 10, None, 10)
+[TypeError] x must be an integer
+>>> berror = Rectangle(10, None, 10, 10)
+[TypeError] height must be an integer
+>>> berror = Rectangle(None, 10, 10, 10)
+[TypeError] width must be an integer
+>>> string = str(b1)
+>>> print(string)
+[Rectangle] (1) 10/10 - 10/10
+>>> print(b1)
+[Rectangle] (1) 10/10 - 10/10

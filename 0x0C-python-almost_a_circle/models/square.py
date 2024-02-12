@@ -10,8 +10,9 @@ class Square(Rectangle):
 	class square uses inheritance to initialize special isntances
 	"""
 	def __str__(self):
-		out = "[Rectangle] ({}) {}/{} {}/{}".format(id, self.__width, self.__height, self.x, self.y)
-		return (out)
+		firsthlf = "[Square] ({}) {}/{} ".format(self.id, self.x, self.y)
+        	scndhlf = "- {}/{}".format(self.__width, self.__height)
+        	return (firsthlf + scndhlf)	
 
 	def __init__(self, size, x=0, y=0, id=None):
         	super().__init__(width=size, height=size, x, y, id)
@@ -36,6 +37,6 @@ class Square(Rectangle):
 
 	@property.setter
 	def size(self, value):
-		super().integer_validator("width", value)
+		super().validator("width", value)
 		self.__width = value
 		self.__height = value

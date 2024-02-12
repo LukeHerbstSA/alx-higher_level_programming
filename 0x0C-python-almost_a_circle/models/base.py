@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+module base - highest parent
+"""
+
 
 class Base:
+    """
+    Class base - initializes id of instances of children
+    """
     __nb_objects = 0
 
     def create(cls, **dictionary):
@@ -11,7 +18,7 @@ class Base:
 		empty_list = json.dumps([])
 		with open(self.__name__ + ".json", "w+") as myfile:
 			myfile.write(empty_list)
-	with open(self.__name__ + ".json", "w+") as myfile:
+	with open(self.__name__ + ".json", "w+") as myfile: # use __name__ or maybe type or cls.__name__to find out calling class
 		json_list = to_json_string(listobjs)
 		myfile.write(json_list)
 

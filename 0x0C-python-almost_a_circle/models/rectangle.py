@@ -1,10 +1,18 @@
 #!/usr/bin/python3
-Base = __import__("base.py").Base
+"""
+module rectangle
+"""
+Base = __import__("base").Base
+
 
 class Rectangle(Base):
+    """
+    class Rectangle - inherits from rectangle
+    """
     def __str__(self):
-        out = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y. self.__width, self.__height)
-        return (out)
+	firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
+        scndhlf = "- {}/{}".format(self.__width, self.__height)
+        return (firsthlf + scndhlf)
 
     @staticmethod
     def validator(*values):
@@ -56,8 +64,8 @@ class Rectangle(Base):
 
     @property.setter
     def width(self, value):
-        validator("width", value)
-        self.__width = value
+	Rectangle.validator("width", value)
+	self.__width = value
 
     @property
     def height(self):
@@ -65,7 +73,7 @@ class Rectangle(Base):
 
     @property.setter
     def height(self, value):
-        validator("height", value)
+        Rectangle.validator("height", value)
         self.__height = value
 
     @property
@@ -73,7 +81,7 @@ class Rectangle(Base):
         return (self.__x)
     @property.setter
     def x(self, value):
-        validator("x", value)
+        Rectangle.validator("x", value)
         self.__x = value
 
     @property
@@ -82,5 +90,5 @@ class Rectangle(Base):
 
     @property.setter
     def y(self, value):
-        validator("y", value)
+        Rectangle.validator("y", value)
         self.__y = value

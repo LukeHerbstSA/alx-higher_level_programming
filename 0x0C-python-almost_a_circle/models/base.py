@@ -15,13 +15,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-	if (cls.__name__ == "Rectangle"):
-		new_inst = Rectangle(1, 2)
-		new_inst.update(dictionary)
-	if (cls.__name__ == "Square"):
-		new_inst = Square(1)
-		new_inst.update(dictionary)
-	return (new_inst)
+	    if (cls.__name__ == "Rectangle"):
+		    new_inst = Rectangle(1, 2)
+		    new_inst.update(dictionary)
+	    if (cls.__name__ == "Square"):
+		    new_inst = Square(1)
+		    new_inst.update(dictionary)
+	    return (new_inst)
 	
 
     @classmethod

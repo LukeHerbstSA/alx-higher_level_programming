@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module rectangle
+module rectangle inherits from base
 """
 Base = __import__("base").Base
 

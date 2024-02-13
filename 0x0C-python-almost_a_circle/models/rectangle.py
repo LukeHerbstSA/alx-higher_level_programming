@@ -1,27 +1,20 @@
 #!/usr/bin/python3
-"""
-module rectangle inherits from base
-"""
+"""Module rectangle inherits from base."""
 Base = __import__("base").Base
 
 
 class Rectangle(Base):
-    """
-    class Rectangle - inherits from rectangle
-    """
+    """Class Rectangle - inherits from rectangle."""
+
     def __str__(self):
-        """
-        returns str repr of instance
-        """
+        """Return str repr of instance."""
         firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
         scndhlf = "- {}/{}".format(self.width, self.height)
-        return (firsthlf + scndhlf)
+        return(firsthlf + scndhlf)
 
     @staticmethod
     def validator(*values):
-        """
-        validates passed list of values
-        """
+        """Validate passed list of values."""
         for i in range(0, len(values)):
             if ((i % 2) != 0):
                 attr = values[i - 1]
@@ -33,9 +26,7 @@ class Rectangle(Base):
                     raise ValueError("{} must be >= 0".format(attr))
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        initializes rectangle instances
-        """
+        """Initialize rectangle instances."""
         Rectangle.validator(["width", width, "height", height, "x", x, "y", y])
         super().__init__(id)
         self.__width = width
@@ -44,15 +35,11 @@ class Rectangle(Base):
         self.__y = y
 
     def to_dictionary(self):
-        """
-        returns dict repr of self
-        """
+        """Return dict repr of self."""
         return (self.__dict__)
 
     def update(self, *args, **kwargs):
-        """
-        updates current instance
-        """
+        """Update current instance."""
         if (args is None):
             for key, value in kwargs:
                 setattr(self, key, value)
@@ -70,9 +57,7 @@ class Rectangle(Base):
                 self.y = args[i]
 
     def display(self):
-        """
-        displays instance visually
-        """
+        """Display instance visually."""
         for j in range(0, self.y):
             print()
         for i in range(0, self.__height):
@@ -81,60 +66,44 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
-        returns width of instance
-        """
+        """Return width of instance."""
         return (self.__width)
 
     @width.setter
     def width(self, value):
-        """
-        sets width value of instance
-        """
+        """Set width value of instance."""
         Rectangle.validator("width", value)
         self.__width = value
 
     @property
     def height(self):
-        """
-        returns height of instance
-        """
+        """Return height of instance."""
         return (self.__height)
 
     @height.setter
     def height(self, value):
-        """
-        sets height of instance
-        """
+        """Set height of instance."""
         Rectangle.validator("height", value)
         self.__height = value
 
     @property
     def x(self):
-        """
-        returns x of instance
-        """
+        """Return x of instance."""
         return (self.__x)
 
     @x.setter
     def x(self, value):
-        """
-        sets x co ord of instance
-        """
+        """Set x co ord of instance."""
         Rectangle.validator("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """
-        returns y co ord of instance
-        """
+        """Return y co ord of instance."""
         return (self.__y)
 
     @y.setter
     def y(self, value):
-        """
-        sets y co ord of instance
-        """
+        """Set y co ord of instance."""
         Rectangle.validator("y", value)
         self.__y = value

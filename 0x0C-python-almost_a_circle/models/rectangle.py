@@ -9,6 +9,7 @@ class Rectangle(Base):
     """
     class Rectangle - inherits from rectangle
     """
+
     def __str__(self):
         firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
         scndhlf = "- {}/{}".format(self.width, self.height)

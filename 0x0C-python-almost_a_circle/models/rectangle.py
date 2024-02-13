@@ -36,8 +36,8 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
 	    if (args == None):
-		    for j in range (0, len(kwargs)):
-			    setattr(self, kwargs[j][0], kwargs[j][1])
+		    for key, value in kwargs:
+			    setattr(self, key, value)
 		    return
         for i in range(0, len(args)):
             if (i == 0):

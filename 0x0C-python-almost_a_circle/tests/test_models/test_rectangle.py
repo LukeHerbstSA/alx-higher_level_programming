@@ -3,27 +3,34 @@
 unittest for rectangle object
 """
 import unittest
-import rectangle
+Rectangle = __import__("rectangle").Rectangle
 
-class testrectangle(unittest.testcase):
+
+class testrectangle(unittest.TestCase):
+	"""
+	class testrectangle tests inst of rectangle
+	"""
 	def test_normal(self):
 		b1 = Rectangle(10, 10, 10, 10)
-		self.assertequal(b1.width, 10)
-		self.assertequal(b1.height, 10)
-		self.assertequal(b1.x, 10)
-		self.assertequal(b1.y, 10)
-		self.assertequal(b1, "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height))
-		self.assertequalstr((b1), "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height))
-		self.assertequal(b1.area(), 100)
+		self.assertEqual(b1.width, 10, "width incorrectly set for inst")
+		self.assertEqual(b1.height, 10, "height incorrectly set for inst")
+		self.assertEqual(b1.x, 10, "x incorrectly set for inst")
+		self.assertEqual(b1.y, 10, "y incorrectly set for inst")
+		self.assertEqual(b1, "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height), "incorrect str repr")
+		self.assertEqualstr((b1), "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height, "incorrect str repr"))
+		self.assertEqual(b1.area(), 100, "invalid area returned")
 
 	def test_badwidth(self):
-		Rectangle.validator(["hey", 10, 10, 10])
-
+		with self.assertRaises(TypeError):
+			Rectangle.validator(["hey", 10, 10, 10])
 	def test_badheight(self):
-		b1 = Rectangle(10, "hey", 10, 10)
+		with self.assertRaises(TypeError):
+			b1 = Rectangle(10, "hey", 10, 10)
 
 	def test_badx(self):
-		b1 = Rectangle(10, 10, "hey", 10)
+		with self.assertRaises(TypeError):
+			b1 = Rectangle(10, 10, "hey", 10)
 
 	def test_bady(self):
-		b1 = Rectangle(10, 10, 10, "hey")
+		with self.assertRaises(TypeError):
+			b1 = Rectangle(10, 10, 10, "hey")

@@ -1,30 +1,37 @@
 #!/usr/bin/python3
 """
-class square
+unittest for rectangle object
 """
 import unittest
-import square
+Square = __import__("square").Square
 
-class testsquare(unittest.testcase()):
-	def test_normal(self):
-		b1 = Square(10, 10, 10)
-		self.assertequal(b1.width, 10)
-                self.assertequal(b1.height, 10)
-                self.assertequal(b1.x, 10)
-                self.assertequal(b1.y, 10)
-                self.assertequal(b1, "[Square] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height))
-                self.assertequalstr((b1), "[Square] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height))
-                self.assertequal(b1.area(), 100)
 
-	test_update(self):
-		b1 = Square(10, 10, 10)
-		b1.update([5, 20, 0, 0], None)
+class testsquare(unittest.TestCase):
+        """
+        class testsquare tests inst of rectangle
+        """
+        def test_normal(self):
+                b1 = Square(10, 10, 10, 10)
+                self.assertEqual(b1.width, 10, "width incorrectly set for inst")
+                self.assertEqual(b1.height, 10, "height incorrectly set for inst")
+                self.assertEqual(b1.x, 10, "x incorrectly set for inst")
+                self.assertEqual(b1.y, 10, "y incorrectly set for inst")
+		self.assertEqualstr(str(b1), "[Square] ({}) {}/{} - {}".format(b1.id, b1.x, b1.y, b1.width), "incorrect str repr"))
+                self.assertEqualstr(b1, "[Square] ({}) {}/{} - {}".format(b1.id, b1.x, b1.y, b1.width), "incorrect str repr"))
+                self.assertEqual(b1.area(), 100, "invalid area returned")
 
-	def test_badwidth(self):
-                Rectangle.validator(["hey", 10, 10])
+        def test_badwidth(self):
+                with self.assertRaises(TypeError):
+                        b1 = Square(["hey", 10, 10])
+
+	def test_badwidthval(self):
+		with self.assertRaises(ValueError):
+			b1 = Square(-1, 10, 10)
 
         def test_badx(self):
-                b1 = Square(10, "hey", 10)
+                with self.assertRaises(TypeError):
+                        b1 = Square(10, "hey", 10)
 
         def test_bady(self):
-                b1 = Square(10, 10, "hey")
+                with self.assertRaises(TypeError):
+                        b1 = Square(10, 10, "hey")

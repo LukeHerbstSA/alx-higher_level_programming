@@ -16,8 +16,8 @@ class testsquare(unittest.TestCase):
         self.assertEqual(b1.height, 10, "height incorrectly set for inst")
         self.assertEqual(b1.x, 10, "x incorrectly set for inst")
         self.assertEqual(b1.y, 10, "y incorrectly set for inst")
-        self.assertEqualstr(str(b1), "[Square] ({}) {}/{} - {}".format(b1.id, b1.x, b1.y, b1.width), "incorrect str repr"))
-        self.assertEqualstr(b1, "[Square] ({}) {}/{} - {}".format(b1.id, b1.x, b1.y, b1.width), "incorrect str repr"))
+        self.assertEqualstr(str(b1), "[Square] (10) 10/10 10/10", "incorrect str repr"))
+        self.assertEqualstr(b1, "[Square] (10) 10/10 10/10", "incorrect str repr"))
         self.assertEqual(b1.area(), 100, "invalid area returned")
 
     def test_badwidth(self):
@@ -35,3 +35,6 @@ class testsquare(unittest.TestCase):
     def test_bady(self):
         with self.assertRaises(TypeError):
             b1 = Square(10, 10, "hey")
+
+if __name__ == "__main__":
+	unittest.main()

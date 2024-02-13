@@ -16,8 +16,8 @@ class testrectangle(unittest.TestCase):
 		self.assertEqual(b1.height, 10, "height incorrectly set for inst")
 		self.assertEqual(b1.x, 10, "x incorrectly set for inst")
 		self.assertEqual(b1.y, 10, "y incorrectly set for inst")
-		self.assertEqual(b1, "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height), "incorrect str repr")
-		self.assertEqualstr((b1), "[Rectangle] ({}) {}/{} - {}/{}".format(b1.id, b1.x, b1.y, b1.width, b1.height, "incorrect str repr"))
+		self.assertEqual(b1, "[Rectangle] (10) 10/10 10/10, "incorrect str repr")
+		self.assertEqualstr((b1), "[Rectangle] (10) 10/10 10/10, "incorrect str repr"))
 		self.assertEqual(b1.area(), 100, "invalid area returned")
 
 	def test_badwidth(self):
@@ -34,3 +34,6 @@ class testrectangle(unittest.TestCase):
 	def test_bady(self):
 		with self.assertRaises(TypeError):
 			b1 = Rectangle(10, 10, 10, "hey")
+
+if (__name__ == "__main__"):
+	unittest.main()

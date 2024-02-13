@@ -34,6 +34,9 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+    def to_dictionary(self):
+	return (self.__dict__)
+
     def update(self, *args, **kwargs):
         if (args is None):
             for key, value in kwargs:

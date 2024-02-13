@@ -10,7 +10,7 @@ class Rectangle(Base):
     class Rectangle - inherits from rectangle
     """
     def __str__(self):
-	    firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
+        firsthlf = "[Rectangle] ({}) {}/{} ".format(self.id, self.x, self.y)
         scndhlf = "- {}/{}".format(self.width, self.height)
         return (firsthlf + scndhlf)
 
@@ -35,10 +35,10 @@ class Rectangle(Base):
         self.__y = y
 
     def update(self, *args, **kwargs):
-	    if (args == None):
-		    for key, value in kwargs:
-			    setattr(self, key, value)
-		    return
+        if (args is None):
+            for key, value in kwargs:
+                setattr(self, key, value)
+            return
         for i in range(0, len(args)):
             if (i == 0):
                 self.id = args[i]
@@ -64,8 +64,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-	    Rectangle.validator("width", value)
-	    self.__width = value
+        Rectangle.validator("width", value)
+        self.__width = value
 
     @property
     def height(self):

@@ -16,7 +16,7 @@ class Base:
             new_inst = Rectangle(1, 2)
             new_inst.update(None, dictionary)
         elif (cls.__name__ == "Square"):
-            Base = __import_("square").Square
+            Square = __import_("square").Square
             new_inst = Square(1)
             new_inst.update(None, dictionary)
         else:
@@ -40,14 +40,14 @@ class Base:
         """Load json file of class."""
         if (cls.__name__ == "Rectangle" or cls.__name__ == "Rectangle"):
             try:
-                with open(cls.__name__ + ".json", r) as myfile:
+                with open(cls.__name__ + ".json", "r") as myfile:
                     list_instances = []
                     json_text = myfile.read()
                     list_dicts = Base.from_json_string(json_text)
                     for element in list_dicts:
                         new_inst = Base.create(element)
                         list_instances.append(new_inst)
-                    return (list_instances)
+                return (list_instances)
             except FileNotFoundError:
                 return ([])
 

@@ -1,2 +1,8 @@
 -- displays records where id=89
-SELECT * FROM first_table WHERE id=89;
+INSERT INTO first_table(
+	id,
+	name
+)	values(
+	89,
+	'Best School'
+);
